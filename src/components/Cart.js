@@ -111,7 +111,7 @@ function Cart(props) {
 
     return (
 
-        <div className="sorting" style={{ paddingTop: "1em" }} hidden={totalprice == 0}>
+        <div className="sorting" style={{ paddingTop: "1em" }} hidden={totalprice < 0.1}>
             <div style={{ paddingTop: "1em" }}>
                 <Paper style={{ maxHeight: 270, overflow: "auto" }} variant={"outlined"}>
                     <FormGroup style={{ paddingLeft: "1em", paddingTop: "1em", paddingBottom: "1em" }}>

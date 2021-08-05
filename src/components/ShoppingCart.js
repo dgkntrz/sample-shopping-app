@@ -2,9 +2,9 @@ import { useSelector } from 'react-redux';
 import './Header.css';
 
 function ShoppingCart() {
-    const price = useSelector(state => state.price);
+    let price = useSelector(state => state.price);
     var formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'TRY' }); // cart component in the header
-
+    if (price < 0) price = 0
     return (
         <div class="container">
             <div class="row">
