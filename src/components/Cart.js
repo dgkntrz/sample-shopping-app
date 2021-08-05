@@ -7,6 +7,7 @@ import './Cart.css';
 import AddRemove from './AddRemove';
 
 
+
 function Cart(props) {
     const totalprice = useSelector(state => state.price);
     let cartArray = [];
@@ -47,7 +48,7 @@ function Cart(props) {
     let render = [];
 
     const handleChange = e => {
-        document.getElementById("fcl" + e).remove(); // if - is pressed and there are no more corresponding item, remove that item from cart
+        cartList.splice(e,1);
     }
 
 
@@ -75,7 +76,6 @@ function Cart(props) {
     }
 
     for (let i = 0; i < cartList.length; i++) { // create cart elements
-        console.log(cartList[i].count)
         render.push(<FormControlLabel id={"fcl" + i}
             control={
                 <div class="container">
@@ -108,13 +108,13 @@ function Cart(props) {
         />);
     }
 
-
+    console.log(render)
     return (
 
         <div className="sorting" style={{ paddingTop: "1em" }} hidden={totalprice < 0.1}>
             <div style={{ paddingTop: "1em" }}>
                 <Paper style={{ maxHeight: 270, overflow: "auto" }} variant={"outlined"}>
-                    <FormGroup style={{ paddingLeft: "1em", paddingTop: "1em", paddingBottom: "1em" }}>
+                    <FormGroup id="parent-form" style={{ paddingLeft: "1em", paddingTop: "1em", paddingBottom: "1em" }}>
                         {render}
                     </FormGroup>
                     <div style={{ float: "right", paddingBottom: "0.5em", paddingRight: "0.5em" }} >

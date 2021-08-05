@@ -18,11 +18,12 @@ export default function AddRemove(props) {
             <div class="col">
                 <button class="button" onClick={() => { // - button
                     dispatch(decrement(parseFloat(price)));
+                    props.decremented(props.name);
                     if (count == 1) {
                         props.onChange(props.index); // if it is clicked while the count is 1, the line will be deleted
                         return;
                     }
-                    props.decremented(props.name);
+                    
                     setcount(count - 1);
                 }}>-</button>
             </div>

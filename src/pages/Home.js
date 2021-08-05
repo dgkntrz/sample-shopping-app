@@ -24,13 +24,11 @@ function Home() { // main body of the screen
 
     const handleDecrement = (e) => { // when an item is deduced from cart, this function is called
         let ci = cartItems;
-        console.log(ci)
         var n = ci.lastIndexOf("[" + e.name + "," + e.price + "]");
         ci = ci.slice(0, n) + ci.slice(n).replace("[" + e.name + "," + e.price + "]", "")
 
         // ci = ci.replace("["+e.name+","+e.price+"]","");
         setCartItems(ci);
-        console.log(ci)
     }
 
     let brandList = [];
