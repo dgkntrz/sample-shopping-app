@@ -83,7 +83,7 @@ function Home() { // main body of the screen
                 tags.splice(i, 1);
             }
         }
-        if (filters.indexOf("~") == filters.indexOf("/")) { // decide which filter is applied first
+        if (filters.indexOf("~") == filters.indexOf("/") && priority != 0) { // decide which filter is applied first
             setPriority(0);
         }
         else if (filters.indexOf("~") < filters.indexOf("/") && priority == -1) {

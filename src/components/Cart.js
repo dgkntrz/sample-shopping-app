@@ -108,7 +108,6 @@ function Cart(props) {
         />);
     }
 
-    console.log(render)
     return (
 
         <div className="sorting" style={{ paddingTop: "1em" }} hidden={totalprice < 0.1}>
