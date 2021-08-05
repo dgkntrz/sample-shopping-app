@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+.main-header {
+    color: white;
+    background-color: #1EA4CE;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.textstyle {
+    font-family: 'Style Script', cursive;
+    font-size: 42px;
+}
+
+.cartbutton {
+    background-color: #147594; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
